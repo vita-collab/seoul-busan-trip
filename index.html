@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇰🇷 首尔·釜山 · 畅畅·小鹏·白菜 · May 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;background:#f4f2ed;color:#1a1a1a;min-height:100vh}
+.hero{background:linear-gradient(155deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:white;padding:2.5rem 1.25rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:48px;background:#f4f2ed;border-radius:60% 60% 0 0/100% 100% 0 0}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:12px;margin-bottom:12px}
+.hero-title{font-size:28px;font-weight:700;margin-bottom:5px}
+.hero-sub{font-size:14px;opacity:.8;margin-bottom:4px}
+.hero-sub2{font-size:13px;opacity:.65;margin-bottom:18px}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:12px}
+.container{max-width:680px;margin:0 auto;padding:1.5rem 1rem 3rem}
+.persona-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.persona{background:white;border-radius:14px;padding:1rem;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.persona-name{font-size:15px;font-weight:700;margin-bottom:2px}
+.persona-type{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;margin-bottom:6px}
+.persona-desc{font-size:12px;color:#666;line-height:1.6}
+.pt-chang{background:#fce7f3;color:#be185d}
+.pt-peng{background:#dbeafe;color:#1d4ed8}
+.pt-bai{background:#dcfce7;color:#166534}
+.notice{background:#fffbeb;border:1px solid #fbbf24;border-radius:14px;padding:1rem 1.25rem;margin-bottom:1rem}
+.notice-title{font-size:13px;font-weight:600;color:#92400e;margin-bottom:5px}
+.notice-body{font-size:13px;color:#78350f;line-height:1.7}
+.notice-blue{background:#eff6ff;border-color:#93c5fd}
+.notice-blue .notice-title{color:#1d4ed8}
+.notice-blue .notice-body{color:#1e40af}
+.notice-green{background:#f0fdf4;border-color:#86efac}
+.notice-green .notice-title{color:#166534}
+.notice-green .notice-body{color:#14532d}
+.notice-slate{background:#f8fafc;border-color:#cbd5e1}
+.notice-slate .notice-title{color:#334155}
+.notice-slate .notice-body{color:#475569}
+.tabs{display:flex;background:white;border-radius:14px;padding:4px;gap:2px;margin-bottom:1.25rem;box-shadow:0 1px 6px rgba(0,0,0,.07)}
+.tab{flex:1;padding:9px 4px;font-size:11px;text-align:center;cursor:pointer;border:none;background:none;color:#888;border-radius:10px;font-weight:500;transition:all .2s;line-height:1.3}
+.tab.active{background:#1a1a2e;color:white}
+.panel{display:none}
+.panel.active{display:block}
+.sec-divider{font-size:12px;font-weight:600;color:#1a1a2e;border-bottom:1px solid #e0ddd6;padding-bottom:8px;margin:1.5rem 0 1rem}
+.card{background:white;border-radius:14px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.card.top-pick{border:2px solid #0f3460}
+.card-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+.card-name{font-size:15px;font-weight:600}
+.card-loc{font-size:12px;color:#888;margin-top:2px}
+.badge{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;white-space:nowrap}
+.b-blue{background:#dbeafe;color:#1d4ed8}
+.b-teal{background:#ccfbf1;color:#0f766e}
+.b-purple{background:#ede9fe;color:#7c3aed}
+.b-amber{background:#fef9c3;color:#a16207}
+.b-red{background:#fee2e2;color:#b91c1c}
+.b-pink{background:#fce7f3;color:#be185d}
+.b-green{background:#dcfce7;color:#166534}
+.b-navy{background:#e0e7ff;color:#3730a3}
+.b-slate{background:#f1f5f9;color:#475569}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+.mi{font-size:12px;color:#666}
+.mi strong{color:#1a1a1a}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.tag{font-size:11px;padding:3px 10px;border-radius:20px;background:#f3f4f6;color:#555}
+.reason{font-size:13px;color:#555;line-height:1.7;border-top:1px solid #f0f0f0;padding-top:10px;margin-top:10px}
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.lnk{font-size:12px;color:#0f3460;text-decoration:none;border:1px solid #a5b4fc;padding:4px 12px;border-radius:20px;display:inline-block}
+.who-likes{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb}
+.wl-chip{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
+.wl-chang{background:#fce7f3;color:#be185d}
+.wl-peng{background:#dbeafe;color:#1d4ed8}
+.wl-bai{background:#dcfce7;color:#166534}
+.wl-all{background:#f3f4f6;color:#374151}
+.wl-label{font-size:11px;color:#aaa;align-self:center}
+.type-toggle{display:flex;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap}
+.type-btn{padding:7px 18px;font-size:13px;border-radius:20px;border:1px solid #d1d5db;background:white;color:#555;cursor:pointer;transition:all .15s;font-weight:500}
+.type-btn.active{background:#1a1a2e;color:white;border-color:#1a1a2e}
+.hotel-section{display:none}
+.hotel-section.active{display:block}
+/* TIMELINE */
+.day-card{background:white;border-radius:14px;margin-bottom:1rem;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.day-hd{background:#1a1a2e;color:white;padding:.875rem 1.25rem;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.day-title{font-size:14px;font-weight:600}
+.day-sub{font-size:11px;opacity:.75;margin-top:2px}
+.tl-row{display:flex;border-bottom:1px solid #f5f5f5}
+.tl-row:last-child{border-bottom:none}
+.tl-time{min-width:62px;padding:12px 10px;font-size:11px;color:#bbb;border-right:1px solid #f5f5f5;line-height:1.4}
+.tl-body{padding:10px 14px;flex:1}
+.tl-title{font-size:13px;font-weight:600}
+.tl-detail{font-size:12px;color:#777;margin-top:3px;line-height:1.5}
+.tl-who{font-size:11px;margin-top:5px;display:flex;gap:5px;flex-wrap:wrap}
+.tl-special{background:#f0fdf4;border-left:3px solid #22c55e}
+.tl-special .tl-title{color:#166534}
+.tl-shop{background:#eff6ff;border-left:3px solid #3b82f6}
+.tl-shop .tl-title{color:#1d4ed8}
+.tl-food{background:#fff7ed;border-left:3px solid #fb923c}
+.tl-food .tl-title{color:#c2410c}
+.tl-move{background:#fdf4ff;border-left:3px solid #a855f7}
+.tl-move .tl-title{color:#7c3aed}
+.tl-sea{background:#ecfeff;border-left:3px solid #06b6d4}
+.tl-sea .tl-title{color:#0e7490}
+.tl-work{background:#f8fafc;border-left:3px solid #94a3b8}
+.tl-work .tl-title{color:#475569}
+/* VOTE */
+.vote-card{background:white;border-radius:14px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.vote-body{padding:1rem 1.25rem .75rem}
+.vote-foot{padding:0 1.25rem .875rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bar-wrap{height:4px;background:#f0f0f0}
+.bar-fill{height:4px;background:linear-gradient(90deg,#1a1a2e,#0f3460);transition:width .4s}
+.vcount{font-size:13px;color:#aaa}
+.vbtn{border:none;background:none;font-size:22px;cursor:pointer;padding:3px 8px;border-radius:8px;transition:background .15s}
+.vbtn:hover{background:#f0f9ff}
+.vbtn.on{background:#dbeafe}
+.tip{background:white;border-radius:12px;padding:1rem 1.25rem;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.tip-title{font-size:13px;font-weight:600;margin-bottom:4px}
+.tip-body{font-size:13px;color:#555;line-height:1.7}
+.w-row{display:flex;gap:8px;margin-bottom:1rem}
+.w-chip{flex:1;background:white;border-radius:10px;padding:10px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.w-label{font-size:10px;color:#999}
+.w-value{font-size:18px;font-weight:700;color:#1a1a2e}
+.w-note{font-size:10px;color:#bbb;margin-top:1px}
+.tbox{background:white;border-radius:14px;overflow:hidden;margin-bottom:1rem;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.tbox-hd{background:#1a1a2e;color:white;padding:.75rem 1.25rem;font-size:14px;font-weight:600}
+.tbox-body{padding:1rem 1.25rem}
+.t-row{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f5f5f5;align-items:flex-start}
+.t-row:last-child{border-bottom:none}
+.t-icon{font-size:20px;min-width:28px}
+.t-text{flex:1}
+.t-title{font-size:13px;font-weight:600}
+.t-detail{font-size:12px;color:#777;margin-top:3px;line-height:1.5}
+/* GUESTBOOK */
+.gb-box{background:white;border-radius:14px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.gb-input-area{display:flex;flex-direction:column;gap:10px;margin-bottom:1.25rem}
+.gb-who{display:flex;gap:8px}
+.gb-who button{flex:1;padding:8px 6px;font-size:12px;border-radius:20px;border:1.5px solid #e5e7eb;background:white;color:#666;cursor:pointer;transition:all .15s;font-weight:500}
+.gb-who button.sel-chang{border-color:#f472b6;background:#fce7f3;color:#be185d}
+.gb-who button.sel-peng{border-color:#60a5fa;background:#dbeafe;color:#1d4ed8}
+.gb-who button.sel-bai{border-color:#4ade80;background:#dcfce7;color:#166534}
+.gb-textarea{width:100%;border:1.5px solid #e5e7eb;border-radius:12px;padding:10px 14px;font-size:13px;resize:none;min-height:80px;font-family:inherit;outline:none;transition:border .15s;color:#1a1a1a}
+.gb-textarea:focus{border-color:#a5b4fc}
+.gb-submit{width:100%;padding:10px;background:#1a1a2e;color:white;border:none;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;transition:opacity .15s}
+.gb-submit:hover{opacity:.85}
+.gb-msgs{display:flex;flex-direction:column;gap:10px}
+.gb-msg{background:#f8fafc;border-radius:12px;padding:.875rem 1.1rem;position:relative}
+.gb-msg-head{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.gb-name{font-size:12px;font-weight:700}
+.gb-time{font-size:11px;color:#bbb}
+.gb-text{font-size:13px;color:#374151;line-height:1.6}
+.gb-del{position:absolute;top:10px;right:12px;font-size:18px;cursor:pointer;color:#ddd;border:none;background:none;transition:color .15s}
+.gb-del:hover{color:#f87171}
+.gb-empty{font-size:13px;color:#bbb;text-align:center;padding:1.5rem 0}
+@media(max-width:480px){.hero-title{font-size:22px}.persona-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">🇰🇷 三人小分队出发</div>
+  <h1 class="hero-title">釜山 🌊 + 首尔 🏙️ 7天行</h1>
+  <p class="hero-sub">畅畅 · 小鹏 · 白菜</p>
+  <p class="hero-sub2">✈️ 往返北京↔首尔 · 2026年5月3日–9日</p>
+  <div class="chips">
+    <span class="chip">🌊 先釜山后首尔</span>
+    <span class="chip">🥩 吃饱吃好</span>
+    <span class="chip">🛍 购物不打卡</span>
+    <span class="chip">☕ 工作日留首尔</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <p style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:.75rem">三位主角</p>
+  <div class="persona-grid">
+    <div class="persona" style="border:2px solid #fce7f3">
+      <div class="persona-name">畅畅</div>
+      <span class="persona-type pt-chang">行程发起人</span>
+      <div class="persona-desc">眼福口福就好，不追求打卡，吃肉和看海缺一不可，工作日要找咖啡馆办公。</div>
+    </div>
+    <div class="persona" style="border:2px solid #dbeafe">
+      <div class="persona-name">小鹏</div>
+      <span class="persona-type pt-peng">老公 · 后勤担当</span>
+      <div class="persona-desc">跟着老婆走，负责后勤，户外装备可能比畅畅更积极，工作日同步远程。</div>
+    </div>
+    <div class="persona" style="border:2px solid #dcfce7">
+      <div class="persona-name">白菜</div>
+      <span class="persona-type pt-bai">好闺蜜</span>
+      <div class="persona-desc">想拍大头贴和证件照 📸，活跃气氛，购物时是畅畅的参谋。</div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <div class="notice-title">📋 行程结构说明</div>
+    <div class="notice-body">
+      <strong>5/3–5/5（2晚）→ 釜山</strong>：看海、吃海鲜、Spa Land，前半程放松<br>
+      <strong>5/5 下午 KTX → 首尔</strong>：高铁2.5小时转场<br>
+      <strong>5/5–5/9（4晚）→ 首尔</strong>：购物、city walk、吃肉，工作日可咖啡馆办公<br>
+      <strong>5/7·8·9 白天</strong>：不安排远行，首尔弘大/延南洞咖啡馆集中区，可随时找地方开电脑
+    </div>
+  </div>
+
+  <div class="w-row">
+    <div class="w-chip"><div class="w-label">釜山住2晚</div><div class="w-value">海云台</div><div class="w-note">海景优先</div></div>
+    <div class="w-chip"><div class="w-label">首尔住4晚</div><div class="w-value">弘大区</div><div class="w-note">人均≤300元</div></div>
+    <div class="w-chip"><div class="w-label">5月气温</div><div class="w-value">16–23°</div><div class="w-note">早晚凉爽</div></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('itinerary',this)">📅 行程</button>
+    <button class="tab" onclick="switchTab('hotels',this)">🏨 住宿</button>
+    <button class="tab" onclick="switchTab('shop',this)">🛍 购物</button>
+    <button class="tab" onclick="switchTab('tips',this)">💡 贴士</button>
+    <button class="tab" onclick="switchTab('guestbook',this)">💬 留言</button>
+  </div>
+
+  <!-- ══════ ITINERARY ══════ -->
+  <div id="itinerary" class="panel active">
+
+    <!-- DAY 1 -->
+    <div class="day-card">
+      <div class="day-hd">
+        <div><div class="day-title">Day 1 · 5月3日（周日）· 飞抵釜山</div><div class="day-sub">北京→首尔仁川落地 → KTX直奔釜山</div></div>
+        <span class="badge b-purple">出发日</span>
+      </div>
+      <div class="tl-row tl-move"><div class="tl-time">仁川落地</div><div class="tl-body"><div class="tl-title">✈️ 北京→首尔仁川 · 落地后直奔釜山</div><div class="tl-detail">出机场后乘 AREX 快线到首尔站（43分钟），<strong>不入住首尔</strong>，行李寄存，直接换乘 KTX 出发釜山。建议选午前落地航班，下午能到釜山。</div></div></div>
+      <div class="tl-row tl-move"><div class="tl-time">KTX</div><div class="tl-body"><div class="tl-title">🚄 首尔→釜山 · 约2小时30分</div><div class="tl-detail">提前在 Klook 购好车票（支持支付宝）。三人可订同一排靠窗，往釜山方向右侧风景好，吃点零食在车上休息。</div></div></div>
+      <div class="tl-row tl-sea"><div class="tl-time">抵达后</div><div class="tl-body"><div class="tl-title">🌊 入住海云台 · 放包就去海边</div><div class="tl-detail">放下行李立刻去海云台沙滩！5月傍晚人少，踩沙子吹海风，看广安大桥，感受釜山和首尔完全不同的慢节奏。</div></div></div>
+      <div class="tl-row tl-food"><div class="tl-time">晚餐</div><div class="tl-body"><div class="tl-title">🦞 海云台생선회 · 第一顿就是海鲜</div><div class="tl-detail">海云台会센터（生鱼片中心）自选活海鲜，刺身+海胆+小菜，配韩国烧酒，三人就着海风一顿吃下去，釜山正式开始。</div>
+        <div class="tl-who"><span class="wl-chip wl-all">三个人吃到扶墙</span></div>
+      </div></div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card">
+      <div class="day-hd">
+        <div><div class="day-title">Day 2 · 5月4日（周一）· 釜山全天</div><div class="day-sub">早晨沙滩 · 甘川文化村 · 扎嘎其 · Spa Land</div></div>
+        <span class="badge b-teal">看海放松</span>
+      </div>
+      <div class="tl-row tl-sea"><div class="tl-time">08:00</div><div class="tl-body"><div class="tl-title">🌅 海云台早晨 · 光脚踩沙</div><div class="tl-detail">5月早晨沙滩人极少，不用特意拍照，就是走走、看看，闻海的味道。最治愈的时刻不需要任何计划。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅 眼福就好</span><span class="wl-chip wl-bai">白菜 发呆</span></div>
+      </div></div>
+      <div class="tl-row"><div class="tl-time">09:30</div><div class="tl-body"><div class="tl-title">☕ 青沙浦海景咖啡 · 早餐</div><div class="tl-detail">海云台附近青沙浦一排海景咖啡馆，坐在玻璃窗前看海吃早餐，不赶时间，磨到10点多再出发。</div></div></div>
+      <div class="tl-row tl-special"><div class="tl-time">11:00</div><div class="tl-body"><div class="tl-title">🎨 甘川洞文化村 · 彩色山村</div><div class="tl-detail">层叠彩色小屋配釜山港海景，被称为"韩国马丘比丘"，人比想象少，巷子里随意逛，不需要特意打卡每个点，走到哪是哪。公交约30分钟到达。</div>
+        <div class="tl-who"><span class="wl-chip wl-bai">白菜 在这里拍大头贴感觉好</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">13:30</div><div class="tl-body"><div class="tl-title">🦀 扎嘎其市场 · 帝王蟹拼盘</div><div class="tl-detail">韩国最大海鲜市场，一楼选活海鲜，二楼加工现吃。帝王蟹、大虾、海胆、生鱼片拼盘，中午去最新鲜。这顿比什么都值。</div></div></div>
+      <div class="tl-row tl-special"><div class="tl-time">15:30</div><div class="tl-body"><div class="tl-title">♨️ 新世界 Spa Land · 泡到起不来</div><div class="tl-detail">釜山新世界百货的 Spa Land，金氏世界纪录亚洲最大汗蒸幕。黄土房、盐室、冰室多种主题，穿统一汗蒸服，配冰饮和烤鸡蛋，一泡三小时一点不腻。约1.5万₩/人。</div>
+        <div class="tl-who"><span class="wl-chip wl-all">三人集体烂掉</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">晚餐</div><div class="tl-body"><div class="tl-title">🍲 돼지국밥 · 釜山猪骨汤饭</div><div class="tl-detail">汗蒸完最想吃的就是这个。釜山灵魂食物，浓白鲜汤配白饭，配泡菜和虾酱，约8,000–9,000₩一碗，饱足又温暖。</div></div></div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-card">
+      <div class="day-hd">
+        <div><div class="day-title">Day 3 · 5月5日（周二·儿童节）· 釜山→首尔</div><div class="day-sub">广安里最后看海 · 下午 KTX 转场 · 首尔落脚</div></div>
+        <span class="badge b-purple">转场日</span>
+      </div>
+      <div class="tl-row tl-sea"><div class="tl-time">上午</div><div class="tl-body"><div class="tl-title">🌊 广安里海滩 · 最后半天看海</div><div class="tl-detail">广安里比海云台更文艺、人更少，海边独立咖啡馆多。找一家坐下来发呆、点杯咖啡，看广安大桥，不用赶着做什么。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅 口福眼福都有了</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">12:00</div><div class="tl-body"><div class="tl-title">🐷 道别釜山 · 西面吃顿好的</div><div class="tl-detail">收拾行李退房，西面商圈随便找一家本地猪骨汤饭或烤肉，轻松一顿，不用赶时间。</div></div></div>
+      <div class="tl-row tl-move"><div class="tl-time">14:00+</div><div class="tl-body"><div class="tl-title">🚄 KTX 釜山→首尔 · 约2小时30分</div><div class="tl-detail">提前在 Klook 买好（同程去程一起买），到首尔站直接换乘地铁去弘大酒店。</div></div></div>
+      <div class="tl-row"><div class="tl-time">傍晚</div><div class="tl-body"><div class="tl-title">🏨 入住首尔 · 弘大 / 延南洞</div><div class="tl-detail">放下行李，在附近随便逛逛，踩一踩弘大周边，找好明天可以办公的咖啡馆。不用安排活动，早点休息。</div></div></div>
+      <div class="tl-row tl-food"><div class="tl-time">晚餐</div><div class="tl-body"><div class="tl-title">🥩 弘大随性吃 · 烤五花肉开幕</div><div class="tl-detail">弘大周边삼겹살（五花肉）烤肉多且便宜，配泡菜、冷面，首尔第一顿就这么开工。</div></div></div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-card">
+      <div class="day-hd">
+        <div><div class="day-title">Day 4 · 5月6日（周三）· 首尔第一天</div><div class="day-sub">仁寺洞·益善洞慢逛 · 汉江傍晚 · 不赶路</div></div>
+        <span class="badge b-teal">慢节奏</span>
+      </div>
+      <div class="tl-row"><div class="tl-time">上午</div><div class="tl-body"><div class="tl-title">☕ 延南洞 / 弘大慢启动</div><div class="tl-detail">延南洞是弘大旁边更安静的街区，咖啡馆密集、人不多，适合吃个早午餐、发个呆，10点多慢慢出门。</div></div></div>
+      <div class="tl-row tl-special"><div class="tl-time">11:00</div><div class="tl-body"><div class="tl-title">🏘 益善洞 · 老胡同咖啡馆漫步</div><div class="tl-detail">首尔保存最完整的老胡同，窄巷里藏着咖啡馆和甜品店，比北村人少很多，不需要打卡，随便转转，感觉到了就好。</div>
+        <div class="tl-who"><span class="wl-chip wl-bai">白菜 找大头贴机器</span><span class="wl-chip wl-chang">畅畅 随便逛逛</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">13:00</div><div class="tl-body"><div class="tl-title">🍗 午餐 · 土俗村参鸡汤</div><div class="tl-detail">景福宫站附近，首尔最有名参鸡汤老店，米其林推荐。整鸡药材炖成奶白鲜汤，排队约30分钟，值得。</div></div></div>
+      <div class="tl-row"><div class="tl-time">下午</div><div class="tl-body"><div class="tl-title">🎨 大头贴 / 证件照 · 白菜的必做清单</div><div class="tl-detail">韩国大头贴机（인생네컷）街头很多，弘大一带最集中。证件照建议找<strong>韩国照相馆</strong>（화보스튜디오）拍，效果比大头贴机好很多，约2–3万₩，当天出片。</div>
+        <div class="tl-who"><span class="wl-chip wl-bai">白菜 今天必须完成</span><span class="wl-chip wl-chang">畅畅 也拍一套</span></div>
+      </div></div>
+      <div class="tl-row tl-special"><div class="tl-time">18:00</div><div class="tl-body"><div class="tl-title">🌅 汉江公园 · 炸鸡配啤酒 + 夕阳</div><div class="tl-detail">盘浦或汝矣岛汉江公园，便利店买炸鸡+맥주，铺垫子坐着看夕阳。5月傍晚最舒服，不需要走路，就是坐着喝酒吹风，三个人聊天，完美。</div>
+        <div class="tl-who"><span class="wl-chip wl-all">三人都爱这种放松</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">晚餐</div><div class="tl-body"><div class="tl-title">🥩 弘大附近烤肉 / 炸鸡续杯</div><div class="tl-detail">汉江回来就在附近吃，弘大一带选择多，价格实惠，不用做功课，走进去顺眼的就行。</div></div></div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-card">
+      <div class="day-hd">
+        <div><div class="day-title">Day 5 · 5月7日（周四）· 工作+购物日</div><div class="day-sub">上午咖啡馆办公 · 下午始祖鸟+宝诗龙 · 不赶路</div></div>
+        <span class="badge b-slate">☕ Work Day</span>
+      </div>
+      <div class="tl-row tl-work"><div class="tl-time">上午</div><div class="tl-body"><div class="tl-title">💻 咖啡馆远程办公</div><div class="tl-detail">弘大·延南洞一带咖啡馆极多，Wi-Fi好、插座多、氛围安静。推荐：<strong>Cafe Bora（弘大）、Anthracite（弘大）、% Arabica（延南洞）</strong>，可以磨半天。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅 咖啡馆办公</span><span class="wl-chip wl-peng">小鹏 同步远程</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">12:30</div><div class="tl-body"><div class="tl-title">🍖 午餐 · 江南韩牛烤肉</div><div class="tl-detail">下午去江南购物，中午就直接在江南吃。韩牛（한우）肉质细嫩，蘸生蛋黄是正宗，体力补满再出发。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅 全程最期待这顿</span></div>
+      </div></div>
+      <div class="tl-row tl-shop"><div class="tl-time">14:00</div><div class="tl-body"><div class="tl-title">🏔 Arc'teryx 始祖鸟 · 狎鸥亭旗舰店</div><div class="tl-detail">地铁狎鸥亭罗德奥站附近旗舰店，带护照可退税约10%。提前官网看好款式和尺码，到店确认再买，不用逛很久。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅</span><span class="wl-chip wl-peng">小鹏 比畅畅先选好</span></div>
+      </div></div>
+      <div class="tl-row tl-shop"><div class="tl-time">15:30</div><div class="tl-body"><div class="tl-title">💍 宝诗龙 Boucheron · 新罗免税店</div><div class="tl-detail">忠武路站附近新罗免税店，出示护照+机票购买，回程在仁川机场提货。Quatre系列、Serpent Bohème。<strong>提前官网看好款式和戒围，到店直接确认。</strong></div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅 今天最重要的事</span><span class="wl-chip wl-peng">小鹏 付款</span><span class="wl-chip wl-bai">白菜 眼光参谋</span></div>
+      </div></div>
+      <div class="tl-row tl-shop"><div class="tl-time">17:00</div><div class="tl-body"><div class="tl-title">🧥 Montbell / 度假穿搭随逛</div><div class="tl-detail">Montbell 在首尔市内有多家，购物路上遇到就进去看。新沙洞林荫道（가로수길）有设计感的韩国品牌，Matin Kim 的棉麻度假风很适合白菜和畅畅。</div></div></div>
+      <div class="tl-row tl-food"><div class="tl-time">晚餐</div><div class="tl-body"><div class="tl-title">🍜 回弘大随便吃</div><div class="tl-detail">购物完坐地铁回弘大，随便找一家顺眼的，吃饱就行，不需要研究，今天够充实了。</div></div></div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-card">
+      <div class="day-hd">
+        <div><div class="day-title">Day 6 · 5月8日（周五）· 工作+Olive Young</div><div class="day-sub">上午办公 · 明洞扫货护肤品 · 汗蒸收尾</div></div>
+        <span class="badge b-slate">☕ Work Day</span>
+      </div>
+      <div class="tl-row tl-work"><div class="tl-time">上午</div><div class="tl-body"><div class="tl-title">💻 咖啡馆办公 · 续昨天</div><div class="tl-detail">同样在弘大·延南洞，今天换一家没去过的咖啡馆，磨到12点左右。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅</span><span class="wl-chip wl-peng">小鹏 远程</span><span class="wl-chip wl-bai">白菜 陪着逛附近小店</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">12:30</div><div class="tl-body"><div class="tl-title">🥟 明洞广藏市场 · 老首尔吃法</div><div class="tl-detail">广藏市场必吃：麻药紫菜饭卷、绿豆煎饼、生章鱼。不需要赶，吃一种喜欢的，饱了就好，不用打卡每一摊。</div></div></div>
+      <div class="tl-row tl-shop"><div class="tl-time">14:00</div><div class="tl-body"><div class="tl-title">🧴 明洞 Olive Young · 护肤品扫货</div><div class="tl-detail">COSRX蜗牛面霜、Anua苦参水、Some By Mi，还有零食伴手礼：蜂蜜黄油杏仁、打糕饼。明洞有大型店，选品全，一次搞定。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅</span><span class="wl-chip wl-bai">白菜 各扫一车</span><span class="wl-chip wl-peng">小鹏 提袋</span></div>
+      </div></div>
+      <div class="tl-row tl-special"><div class="tl-time">16:30</div><div class="tl-body"><div class="tl-title">♨️ 首尔汗蒸幕 · 全身放松</div><div class="tl-detail">推荐龙山汉江汗蒸幕或首尔新世界Spa，购物后泡一下，整个人松开，回来打包行李正好状态最好。</div>
+        <div class="tl-who"><span class="wl-chip wl-all">三人烂掉</span></div>
+      </div></div>
+      <div class="tl-row tl-food"><div class="tl-time">晚餐</div><div class="tl-body"><div class="tl-title">🥩 最后一顿认真的烤肉</div><div class="tl-detail">明天就走了，今晚认真吃一顿。弘大附近找一家黑毛猪五花肉，配冷面和大酱汤，三个人围着炉子，好好聊聊这趟。</div>
+        <div class="tl-who"><span class="wl-chip wl-all">这顿不将就</span></div>
+      </div></div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-card">
+      <div class="day-hd">
+        <div><div class="day-title">Day 7 · 5月9日（周六）· 回北京</div><div class="tl-sub">最后一碗参鸡汤 · 仁川机场退税提货 · 回家</div></div>
+        <span class="badge b-red">返程</span>
+      </div>
+      <div class="tl-row tl-food"><div class="tl-time">早晨</div><div class="tl-body"><div class="tl-title">🍗 最后一碗参鸡汤 / 豆腐锅</div><div class="tl-detail">附近找一家开门早的汤店，吃一碗暖的，这才是韩国早晨应该有的味道。</div></div></div>
+      <div class="tl-row tl-move"><div class="tl-time">出发</div><div class="tl-body"><div class="tl-title">🚆 弘大→仁川机场</div><div class="tl-detail">地铁弘大入口站可直接乘 AREX 到仁川，约53分钟，不需要打车。<strong>航班前3小时出发</strong>，留时间办理退税和提货。</div></div></div>
+      <div class="tl-row tl-shop"><div class="tl-time">机场</div><div class="tl-body"><div class="tl-title">🛃 退税盖戳 + 宝诗龙提货</div><div class="tl-detail">进关前去退税窗口盖VAT戳，过安检后免税区去新罗提货台取宝诗龙（提前确认柜台位置）。最后免税区买点零食补仓。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅 宝诗龙拿到手一刻</span></div>
+      </div></div>
+      <div class="tl-row tl-special"><div class="tl-time">登机</div><div class="tl-body"><div class="tl-title">🏠 满载而归</div><div class="tl-detail">行李箱：冲锋衣+宝诗龙戒指+度假穿搭+护肤品+零食。胃里：海鲜海鲜海鲜和烤肉。三个人靠在座位上睡着，完美的旅程。</div>
+        <div class="tl-who"><span class="wl-chip wl-chang">畅畅 口福眼福都有了</span><span class="wl-chip wl-bai">白菜 大头贴拍到了</span><span class="wl-chip wl-peng">小鹏 累并快乐</span></div>
+      </div></div>
+    </div>
+
+    <div class="notice notice-green" style="margin-top:1rem">
+      <div class="notice-title">✨ 这趟必有的几个高光时刻</div>
+      <div class="notice-body">
+        Day 2 · 釜山扎嘎其帝王蟹，吃到不想走 🦞<br>
+        Day 2 · Spa Land 泡到起不来 ♨️<br>
+        Day 3 · 广安里咖啡馆发呆，看海不说话 🌊<br>
+        Day 5 · 宝诗龙戒指到手那一刻 💍<br>
+        Day 6 · 汉江炸鸡，三个人对着夕阳干杯 🍺
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ HOTELS ══════ -->
+  <div id="hotels" class="panel">
+    <div class="type-toggle">
+      <button class="type-btn active" onclick="switchHotel('h-seoul',this)">🏙 首尔住宿（4晚）</button>
+      <button class="type-btn" onclick="switchHotel('h-busan',this)">🌊 釜山住宿（2晚）</button>
+    </div>
+
+    <div id="h-seoul" class="hotel-section active">
+      <p class="sec-divider">🏙 首尔住宿 · 弘大/延南洞区 · 人均≤300元优先</p>
+      <p style="font-size:13px;color:#555;line-height:1.65;margin-bottom:1rem">弘大是工作日最方便的区域：咖啡馆密集、地铁直达仁川、步行延南洞，4晚不换地方，不折腾。家庭房或者整套民宿三人住最划算。</p>
+
+      <div class="card top-pick">
+        <div class="card-hd"><div><div class="card-name">弘大延南洞 整套 Airbnb 民宿</div><div class="card-loc">弘大 / 延南洞 · 三人整套</div></div><span class="badge b-green">首推 · 最划算</span></div>
+        <div class="meta"><div class="mi">💴 <strong>约¥400–700/晚整套</strong></div><div class="mi">👥 三人均摊约¥140–230/人</div></div>
+        <div class="tags"><span class="tag">独立厨房</span><span class="tag">洗衣机</span><span class="tag">三人整套</span><span class="tag">人均远低于300</span></div>
+        <div class="reason">📌 三人同住整套最划算，人均远低于300元。弘大附近Airbnb选"弘大附近整套"或"延南洞공유주택"，提前1–2个月订。有厨房可以买便利店东西回来随便吃，有洗衣机不用担心衣服。白菜独立一间，两口子一间，互不打扰。</div>
+        <div class="who-likes"><span class="wl-label">谁最爱</span><span class="wl-chip wl-all">三人都满意</span><span class="wl-chip wl-bai">白菜 有独立空间</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-hd"><div><div class="card-name">弘大附近 家庭房酒店</div><div class="card-loc">弘大 / 合井站 · 家庭三人间</div></div><span class="badge b-blue">备选</span></div>
+        <div class="meta"><div class="mi">💴 <strong>约¥600–900/晚/间</strong></div><div class="mi">👥 三人均摊约¥200–300/人</div></div>
+        <div class="tags"><span class="tag">家庭房</span><span class="tag">弘大步行圈</span><span class="tag">预订灵活</span></div>
+        <div class="reason">📌 不想用Airbnb的话，找弘大附近提供三人家庭房的酒店。推荐在携程/Booking搜"弘大三人家庭房"，价格约¥600–900/晚，三人均摊约¥200–300/人，在300元以内。</div>
+      </div>
+
+      <div class="notice notice-slate" style="margin-top:.5rem">
+        <div class="notice-title">☕ 工作日友好咖啡馆（弘大·延南洞区）</div>
+        <div class="notice-body">
+          <strong>Cafe Bora 弘大</strong>：ins风设计，Wi-Fi+插座，不催走<br>
+          <strong>Anthracite 弘大</strong>：工业风改造厂房，安静宽敞，适合长时间工作<br>
+          <strong>% Arabica 延南洞</strong>：安静不吵，附近还有大量独立小咖啡馆<br>
+          <strong>延南洞一带</strong>：咖啡馆随便走进去基本都有Wi-Fi，人不多，适合磨半天
+        </div>
+      </div>
+    </div>
+
+    <div id="h-busan" class="hotel-section">
+      <p class="sec-divider">🌊 釜山住宿 · 海云台区 · 2晚 · 可略贵</p>
+      <p style="font-size:13px;color:#555;line-height:1.65;margin-bottom:1rem">釜山只住2晚，海云台是最值得的选择，步行到沙滩，早晨推开窗就是海。这两晚预算可以比首尔松一点。</p>
+
+      <div class="card top-pick">
+        <div class="card-hd"><div><div class="card-name">海云台海景公寓式民宿</div><div class="card-loc">Airbnb · 海云台区 · 三人整套</div></div><span class="badge b-teal">海景首推</span></div>
+        <div class="meta"><div class="mi">💴 <strong>约¥800–1200/晚整套</strong></div><div class="mi">👥 三人均摊约¥270–400/人</div></div>
+        <div class="tags"><span class="tag">海景窗</span><span class="tag">独立厨房</span><span class="tag">洗衣机</span><span class="tag">三人整套</span></div>
+        <div class="reason">📌 Airbnb搜"해운대 오션뷰"（海云台海景），有大量三室公寓，推开窗就是大海。三人均摊依然比星级酒店便宜很多，但体验感更好，提前1–2个月订。</div>
+        <div class="who-likes"><span class="wl-chip wl-chang">畅畅 推开窗看海</span><span class="wl-chip wl-bai">白菜 有自己的房间</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-hd"><div><div class="card-name">Novotel Ambassador Busan</div><div class="card-loc">海云台 · 雅高旗下 · 步行3分钟到沙滩</div></div><span class="badge b-blue">稳妥备选</span></div>
+        <div class="meta"><div class="mi">💴 <strong>约¥1000–1500/晚/间</strong></div><div class="mi">👥 三人两间均摊约¥670–1000/人</div></div>
+        <div class="tags"><span class="tag">海云台核心</span><span class="tag">Accor积分</span><span class="tag">稳定</span></div>
+        <div class="reason">📌 如果不想用Airbnb，Novotel是海云台性价比最高的连锁酒店，步行到沙滩约3分钟，服务稳定。三人需订两间，人均略高但省心。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ SHOP ══════ -->
+  <div id="shop" class="panel">
+    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">主要集中在 Day 5（5/7 下午）首尔，不赶路，按顺序来，别把购物变成任务</p>
+
+    <p class="sec-divider">🏔 户外装备（Day 5 下午 · 狎鸥亭）</p>
+    <div class="card top-pick">
+      <div class="card-hd"><div><div class="card-name">Arc'teryx 始祖鸟</div><div class="card-loc">📍 狎鸥亭洞旗舰店（地铁狎鸥亭罗德奥站）</div></div><span class="badge b-navy">主要目标</span></div>
+      <div class="meta"><div class="mi">💴 带护照退税约10%</div><div class="mi">🎯 偶有韩国限定款</div></div>
+      <div class="tags"><span class="tag">冲锋衣</span><span class="tag">GORE-TEX</span><span class="tag">Veilance城市线</span></div>
+      <div class="reason">📌 提前官网看好款式+尺码，到店直接确认，不用逛很久，20分钟搞定。带护照结账时退税，省约10%。</div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-name">Montbell</div><div class="card-loc">📍 首尔市内多家（官网查门店，弘大/明洞附近有）</div></div><span class="badge b-teal">顺手买</span></div>
+      <div class="tags"><span class="tag">轻量羽绒800蓬</span><span class="tag">雨舞者冲锋衣</span><span class="tag">速干衣</span></div>
+      <div class="reason">📌 价格比国内实惠，买完正好在首尔工作日穿，也适合度假随身带。经过门店就进去看，不用专门跑一趟。</div>
+    </div>
+
+    <p class="sec-divider">💍 珠宝（Day 5 下午 · 新罗免税店）</p>
+    <div class="card top-pick">
+      <div class="card-hd"><div><div class="card-name">宝诗龙 Boucheron · 新罗免税店</div><div class="card-loc">📍 忠武路站附近新罗免税店 · 离境仁川机场提货</div></div><span class="badge b-purple">重点目标</span></div>
+      <div class="meta"><div class="mi">🛂 出示护照+机票购买</div><div class="mi">🏛 仁川机场离境时提货</div></div>
+      <div class="tags"><span class="tag">Quatre系列</span><span class="tag">Serpent Bohème</span><span class="tag">免税价</span></div>
+      <div class="reason">📌 <strong>流程</strong>：店内挑选→出示护照+回程机票→付款→拿提货单→Day 7出发当天仁川机场免税区提货窗口取货。免税价省约10–13%。提前官网看好款式和戒围，到店确认即可，不用花太多时间挑。</div>
+      <div class="who-likes"><span class="wl-chip wl-chang">畅畅 这趟的重头戏</span></div>
+    </div>
+
+    <p class="sec-divider">📸 大头贴 / 证件照（Day 4 下午 · 弘大附近）</p>
+    <div class="card top-pick">
+      <div class="card-hd"><div><div class="card-name">韩国照相馆 증명사진 · 证件照</div><div class="card-loc">📍 弘大附近有多家摄影工作室</div></div><span class="badge b-pink">白菜必做</span></div>
+      <div class="meta"><div class="mi">💴 约2–3万₩（约¥100–150）</div><div class="mi">⏱ 当天出片</div></div>
+      <div class="tags"><span class="tag">韩系修图风格</span><span class="tag">当天出片</span><span class="tag">纸质+电子版</span></div>
+      <div class="reason">📌 韩国照相馆拍证件照水平很高，修图自然好看，价格实惠。搜 Naver 地图"증명사진 홍대（弘大证件照）"可以找到附近工作室，提前看评价预约。</div>
+      <div class="who-likes"><span class="wl-chip wl-bai">白菜 今天必须搞定</span><span class="wl-chip wl-chang">畅畅 也顺便拍一套</span></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-name">인생네컷 · 大头贴机</div><div class="card-loc">📍 弘大步行街随处可见</div></div><span class="badge b-green">随手拍</span></div>
+      <div class="meta"><div class="mi">💴 约4,000–6,000₩/次（2–3张小图）</div></div>
+      <div class="tags"><span class="tag">三人合拍</span><span class="tag">即拍即取</span><span class="tag">韩风滤镜</span></div>
+      <div class="reason">📌 弘大街头大头贴机超多，三个人一起拍一组留念特别好玩。也可以拍白菜个人大头贴，但证件照质量更好，两个都拍也没多少钱。</div>
+    </div>
+
+    <p class="sec-divider">🧴 护肤品伴手礼（Day 6 · 明洞）</p>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-name">Olive Young 明洞大店</div><div class="card-loc">📍 明洞步行街内 · 选品最全</div></div><span class="badge b-green">必逛</span></div>
+      <div class="tags"><span class="tag">COSRX蜗牛面霜</span><span class="tag">Anua苦参水</span><span class="tag">蜂蜜黄油杏仁</span><span class="tag">打糕饼</span></div>
+      <div class="reason">📌 价格比免税店亲民，护肤品+零食一次搞定，不用专门跑很多地方。蜂蜜黄油杏仁是最受欢迎的伴手礼，多买几包。</div>
+    </div>
+  </div>
+
+  <!-- ══════ TIPS ══════ -->
+  <div id="tips" class="panel">
+
+    <p class="sec-divider">✈️ 机票节点</p>
+    <div class="tbox">
+      <div class="tbox-hd">✈️ 航班说明（往返北京↔首尔）</div>
+      <div class="tbox-body">
+        <div class="t-row"><div class="t-icon">🛬</div><div class="t-text"><div class="t-title">去程：北京→首尔仁川（5/3）</div><div class="t-detail">建议选<strong>上午到达</strong>的航班（落地时间≤13:00），争取当天还能 KTX 到釜山。北京首都/大兴均有直飞，约2小时。</div></div></div>
+        <div class="t-row"><div class="t-icon">🚄</div><div class="t-text"><div class="t-title">落地后直奔釜山</div><div class="t-detail">AREX快线到首尔站（43分钟）→ 行李寄存 → KTX 出发釜山。首尔站行李寄存方便，不用绕路。</div></div></div>
+        <div class="t-row"><div class="t-icon">🛫</div><div class="t-text"><div class="t-title">返程：首尔仁川→北京（5/9）</div><div class="t-detail">从弘大乘 AREX 到仁川约53分钟。<strong>航班前3小时出发</strong>，留时间退税盖戳+宝诗龙提货。</div></div></div>
+      </div>
+    </div>
+
+    <p class="sec-divider">🚇 全程交通（无需驾照）</p>
+    <div class="tip"><div class="tip-title">首尔市内</div><div class="tip-body">买 T-money 交通卡（便利店¥5,000，可充值），刷地铁+公交全覆盖。打车用 Kakao Taxi App，比路边好叫。弘大→江南约25分钟地铁。</div></div>
+    <div class="tip"><div class="tip-title">首尔→釜山 KTX</div><div class="tip-body">Klook（支付宝/微信付）提前购，约5–6万₩/人/单程。首尔站出发，约2.5小时到釜山站，再打车或地铁到海云台约20分钟。</div></div>
+    <div class="tip"><div class="tip-title">釜山市内</div><div class="tip-body">地铁4条线覆盖主要景点。甘川洞文化村需换公交（约30分钟）。T-money首尔釜山通用。</div></div>
+
+    <p class="sec-divider">📱 必备 App</p>
+    <div class="tip"><div class="tip-title">导航·翻译·打车·购票·外卖</div><div class="tip-body">
+      <strong>Naver Map</strong>：韩国必用导航（Google Maps导航在韩国很差）<br>
+      <strong>Papago</strong>：拍照翻译菜单必备<br>
+      <strong>Kakao Taxi</strong>：打车，可刷信用卡<br>
+      <strong>Klook</strong>：KTX购票，支持支付宝<br>
+      <strong>Coupang Eats / Baemin</strong>：外卖App，工作日不想出门可以叫
+    </div></div>
+
+    <p class="sec-divider">💰 费用参考</p>
+    <div class="tip"><div class="tip-title">住宿（首尔Airbnb整套）</div><div class="tip-body">弘大民宿约¥400–700/晚整套，三人均摊约¥140–230/人/晚，4晚约¥560–920/人</div></div>
+    <div class="tip"><div class="tip-title">住宿（釜山海景Airbnb）</div><div class="tip-body">约¥800–1200/晚整套，三人均摊约¥270–400/人/晚，2晚约¥540–800/人</div></div>
+    <div class="tip"><div class="tip-title">餐饮+交通（不含购物）</div><div class="tip-body">餐饮约¥150–300/天/人，KTX来回¥500/人，T-money+打车约¥200/人<br><strong>7天非购物人均约¥2,500–4,000</strong></div></div>
+
+    <div class="tip"><div class="tip-title">🗓 提前要做的事</div><div class="tip-body">
+      ① 签证 — <strong>出发前1个月申请</strong>，需护照、机票、酒店预订、银行流水<br>
+      ② 首尔Airbnb — 出发前1–2个月订<br>
+      ③ 釜山海景Airbnb — 同上，优质房子抢得快<br>
+      ④ KTX来回两程 — 出发前2–4周在Klook购买<br>
+      ⑤ 宝诗龙官网 — 提前看好款式+戒围<br>
+      ⑥ 弘大证件照工作室 — 提前Naver搜好，可不预约直接去
+    </div></div>
+  </div>
+
+  <!-- ══════ GUESTBOOK ══════ -->
+  <div id="guestbook" class="panel">
+    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">写下你的期待、碎碎念、或者出发前的激动 💬</p>
+
+    <div class="gb-box">
+      <div class="gb-input-area">
+        <div class="gb-who">
+          <button id="btn-chang" onclick="selectWho('畅畅')">畅畅</button>
+          <button id="btn-peng" onclick="selectWho('小鹏')">小鹏</button>
+          <button id="btn-bai" onclick="selectWho('白菜')">白菜</button>
+        </div>
+        <textarea class="gb-textarea" id="gb-text" placeholder="写点什么……" rows="3"></textarea>
+        <button class="gb-submit" onclick="submitMsg()">发出去 ✉️</button>
+      </div>
+      <div class="gb-msgs" id="gb-msgs">
+        <div class="gb-empty" id="gb-empty">还没有留言，第一个写下来吧 ✨</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:2.5rem 0 1rem;font-size:12px;color:#bbb">
+    Made with 💙 for 畅畅 · 小鹏 · 白菜<br>
+    首尔·釜山 7天小分队 · May 2026<br>
+    <span style="font-size:11px">更新于 2026.04</span>
+  </div>
+
+</div>
+
+<script>
+/* ── Tabs ── */
+function switchTab(n,e){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById(n).classList.add('active');
+  e.classList.add('active');
+}
+function switchHotel(n,e){
+  document.querySelectorAll('.type-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.hotel-section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(n).classList.add('active');
+  e.classList.add('active');
+}
+
+/* ── Guestbook ── */
+var selectedWho = '';
+var msgs = JSON.parse(localStorage.getItem('kr_msgs')||'[]');
+var colorMap = {'畅畅':'wl-chang','小鹏':'wl-peng','白菜':'wl-bai'};
+var btnMap = {'畅畅':'btn-chang sel-chang','小鹏':'btn-peng sel-peng','白菜':'btn-bai sel-bai'};
+
+function selectWho(name){
+  selectedWho = name;
+  ['chang','peng','bai'].forEach(k=>{
+    var b = document.getElementById('btn-'+k);
+    b.className = '';
+  });
+  var bClass = name==='畅畅'?'sel-chang':name==='小鹏'?'sel-peng':'sel-bai';
+  document.getElementById('btn-'+(name==='畅畅'?'chang':name==='小鹏'?'peng':'bai')).className = bClass;
+}
+
+function renderMsgs(){
+  var box = document.getElementById('gb-msgs');
+  var empty = document.getElementById('gb-empty');
+  if(msgs.length===0){ empty.style.display='block'; return; }
+  empty.style.display='none';
+  // Clear non-empty msgs
+  Array.from(box.children).forEach(c=>{ if(c.id!=='gb-empty') c.remove(); });
+  msgs.forEach(function(m,i){
+    var div = document.createElement('div');
+    div.className='gb-msg';
+    var cc = colorMap[m.who]||'wl-all';
+    div.innerHTML = '<div class="gb-msg-head"><span class="wl-chip '+cc+'">'+m.who+'</span><span class="gb-time">'+m.time+'</span></div><div class="gb-text">'+m.text.replace(/</g,'&lt;').replace(/\n/g,'<br>')+'</div><button class="gb-del" onclick="delMsg('+i+')" title="删除">×</button>';
+    box.appendChild(div);
+  });
+}
+
+function submitMsg(){
+  if(!selectedWho){ alert('先选一下你是谁 😊'); return; }
+  var t = document.getElementById('gb-text').value.trim();
+  if(!t){ alert('写点什么再发吧～'); return; }
+  var now = new Date();
+  var time = (now.getMonth()+1)+'/'+ now.getDate()+' '+now.getHours()+':'+(now.getMinutes()<10?'0':'')+now.getMinutes();
+  msgs.unshift({who:selectedWho, text:t, time:time});
+  localStorage.setItem('kr_msgs', JSON.stringify(msgs));
+  document.getElementById('gb-text').value='';
+  renderMsgs();
+}
+
+function delMsg(i){
+  if(!confirm('删除这条留言？')) return;
+  msgs.splice(i,1);
+  localStorage.setItem('kr_msgs', JSON.stringify(msgs));
+  renderMsgs();
+}
+
+renderMsgs();
+</script>
+</body>
+</html>
