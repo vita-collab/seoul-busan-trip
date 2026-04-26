@@ -208,6 +208,7 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
     <button class="tab active" onclick="switchTab('itinerary',this)">📅 行程</button>
     <button class="tab" onclick="switchTab('hotels',this)">🏨 住宿</button>
     <button class="tab" onclick="switchTab('shop',this)">🛍 购物</button>
+    <button class="tab" onclick="switchTab('booking',this)">🎫 预约</button>
     <button class="tab" onclick="switchTab('tips',this)">💡 贴士</button>
     <button class="tab" onclick="switchTab('guestbook',this)">💬 留言</button>
   </div>
@@ -481,6 +482,144 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
       <div class="card-hd"><div><div class="card-name">Olive Young 明洞大店</div><div class="card-loc">📍 明洞步行街内 · 选品最全</div></div><span class="badge b-green">必逛</span></div>
       <div class="tags"><span class="tag">COSRX蜗牛面霜</span><span class="tag">Anua苦参水</span><span class="tag">蜂蜜黄油杏仁</span><span class="tag">打糕饼</span></div>
       <div class="reason">📌 价格比免税店亲民，护肤品+零食一次搞定，不用专门跑很多地方。蜂蜜黄油杏仁是最受欢迎的伴手礼，多买几包。</div>
+    </div>
+  </div>
+
+  <!-- ══════ BOOKING ══════ -->
+  <div id="booking" class="panel">
+    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">两个必须提前预约的项目，点卡片直接跳转预约页面 👇</p>
+
+    <!-- 胶囊列车 -->
+    <div class="tbox">
+      <div class="tbox-hd">🚂 天空胶囊列车 · Day 2（5/4周一）· 必须提前预约</div>
+      <div class="tbox-body">
+        <div class="t-row"><div class="t-icon">⚠️</div><div class="t-text"><div class="t-title">预约开放时间</div><div class="t-detail">每次开放<strong>往后约一周</strong>的票。5/4（周一）的票，最早从 <strong>4月28日（周二）起</strong>开放抢购，建议当天第一时间去官网抢，热门时段很快售罄。</div></div></div>
+        <div class="t-row"><div class="t-icon">👥</div><div class="t-text"><div class="t-title">3人刚好一节车厢</div><div class="t-detail">每节最多4人，三人包一节，不用和陌生人拼。<strong>从尾浦站出发→青沙浦</strong>，视野更好，去程胶囊列车+回程海岸列车套票最划算。</div></div></div>
+        <div class="t-row"><div class="t-icon">💰</div><div class="t-text"><div class="t-title">价格参考</div><div class="t-detail">胶囊列车单程约35,000₩/人，来回套票（胶囊+海岸列车）约55,000₩/人。Klook购买价格略高但操作简单，支持支付宝。</div></div></div>
+      </div>
+    </div>
+
+    <p style="font-size:12px;font-weight:600;color:#1a1a2e;margin-bottom:10px">选一个渠道预约 👇</p>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:1.5rem">
+
+      <a href="https://www.bluelinepark.com/chn/skyCapsuleReservation.do" target="_blank" style="text-decoration:none">
+        <div style="background:white;border:2px solid #0f3460;border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem">
+          <div style="font-size:2rem;flex-shrink:0">🌐</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:#0f3460;margin-bottom:2px">官网直接预约（中文版）</div>
+            <div style="font-size:12px;color:#555;margin-bottom:4px">bluelinepark.com · 最便宜 · 支持中文</div>
+            <div style="display:inline-block;background:#0f3460;color:white;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600">点击前往预约 →</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.klook.com/zh-CN/activity/10382-haeundae-blue-line-park-sky-capsule-busan/" target="_blank" style="text-decoration:none">
+        <div style="background:white;border:1.5px solid #e5e7eb;border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem">
+          <div style="font-size:2rem;flex-shrink:0">🟠</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:#ff5722;margin-bottom:2px">Klook 预约</div>
+            <div style="font-size:12px;color:#555;margin-bottom:4px">支持支付宝 · 操作最简单 · 价格略高</div>
+            <div style="display:inline-block;background:#ff5722;color:white;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600">点击前往预约 →</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.kkday.com/zh-cn/product/20622" target="_blank" style="text-decoration:none">
+        <div style="background:white;border:1.5px solid #e5e7eb;border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem">
+          <div style="font-size:2rem;flex-shrink:0">🟢</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:#1a7a4a;margin-bottom:2px">KKday 预约</div>
+            <div style="font-size:12px;color:#555;margin-bottom:4px">支持微信/支付宝 · 中文客服</div>
+            <div style="display:inline-block;background:#1a7a4a;color:white;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600">点击前往预约 →</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- 冲浪 -->
+    <div class="tbox">
+      <div class="tbox-hd">🏄 松亭海滩冲浪 · Day 4（5/6周三）上午 · 建议提前预约</div>
+      <div class="tbox-body">
+        <div class="t-row"><div class="t-icon">📍</div><div class="t-text"><div class="t-title">去松亭，不是海云台</div><div class="t-detail">海云台海滩不能冲浪，釜山冲浪圣地是<strong>松亭海水浴场（송정해수욕장）</strong>，从酒店打车约15分钟，约1.5万₩。</div></div></div>
+        <div class="t-row"><div class="t-icon">🌊</div><div class="t-text"><div class="t-title">5月波浪条件</div><div class="t-detail">5月是春季，南西风偏多，波浪条件中等偏弱，<strong>非常适合初学者</strong>。松亭的波浪比较平稳，起伏均匀，是韩国初学冲浪最推荐的地点之一。</div></div></div>
+        <div class="t-row"><div class="t-icon">⏱</div><div class="t-text"><div class="t-title">推荐时间段</div><div class="t-detail">上午9:00–12:00，人少、光线好、涨潮方向波浪更稳。选2小时教学课程+无限自由冲浪套餐，装备全包，不用自己带任何东西。</div></div></div>
+        <div class="t-row"><div class="t-icon">💰</div><div class="t-text"><div class="t-title">价格参考</div><div class="t-detail">约5–6万₩/人（约¥270–330），含2小时教学+自由冲浪+全套装备+湿衣+拍照。三人总计约¥800–1000。</div></div></div>
+      </div>
+    </div>
+
+    <p style="font-size:12px;font-weight:600;color:#1a1a2e;margin-bottom:10px">选一家冲浪学校预约 👇</p>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:1.5rem">
+
+      <a href="https://www.kkday.com/zh-cn/product/103714" target="_blank" style="text-decoration:none">
+        <div style="background:white;border:2px solid #06b6d4;border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem">
+          <div style="font-size:2rem;flex-shrink:0">🏄</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:#0e7490;margin-bottom:2px">서프홀릭 Surfholic · KKday预约</div>
+            <div style="font-size:12px;color:#555;margin-bottom:4px">松亭最大冲浪学校 · 2小时教学+自由冲浪 · 装备全包 · 附赠个人拍照</div>
+            <div style="display:inline-block;background:#06b6d4;color:white;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600">点击前往预约 →</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.surfholic.co.kr/branch/songjeong_reserve.php" target="_blank" style="text-decoration:none">
+        <div style="background:white;border:1.5px solid #e5e7eb;border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem">
+          <div style="font-size:2rem;flex-shrink:0">🌐</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:#1a1a2e;margin-bottom:2px">Surfholic 官网直接预约</div>
+            <div style="font-size:12px;color:#555;margin-bottom:4px">surfholic.co.kr · 韩文界面 · 价格最低 · 可微信翻译操作</div>
+            <div style="display:inline-block;background:#1a1a2e;color:white;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600">点击前往官网 →</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://experiences.myrealtrip.com/products/3827513" target="_blank" style="text-decoration:none">
+        <div style="background:white;border:1.5px solid #e5e7eb;border-radius:14px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem">
+          <div style="font-size:2rem;flex-shrink:0">🎯</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:#7c3aed;margin-bottom:2px">서프로드 Surf Road · My Real Trip</div>
+            <div style="font-size:12px;color:#555;margin-bottom:4px">松亭海滩口 · 1小时精品课程 · 中文评价多 · 可选8/10/14/15/16时</div>
+            <div style="display:inline-block;background:#7c3aed;color:white;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600">点击前往预约 →</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- 操作流程 -->
+    <div class="notice notice-blue">
+      <div class="notice-title">📋 两个项目都要做的事（出发前）</div>
+      <div class="notice-body">
+        <strong>胶囊列车</strong>：4月28日（周二）一早去官网或Klook抢 5/4 上午场次，选尾浦出发，3人同一节。抢到截图保存二维码。<br>
+        <strong>冲浪</strong>：提前3–7天在KKday或Surfholic官网预约 5/4 或 5/5 上午场次（如果5/4改去冲浪）。选好时间，带好泳衣，其他装备冲浪学校全提供。<br>
+        <strong>注意</strong>：两项都支持支付宝，遇到天气问题通常可改期，预约时确认退改政策。
+      </div>
+    </div>
+
+    <!-- 3号落地晚餐 -->
+    <p class="sec-divider">🍽 5/3 落地晚餐 · 步行即到 · 不折腾</p>
+    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">酒店步行1–5分钟内，飞了一天不想费脑子，出门就能吃到的选择：</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div class="tip">
+        <div class="tip-title">🥩 영남돼지（岭南猪）· 步行约2分钟</div>
+        <div class="tip-body">正宗韩国烤猪肉，就在酒店附近，落地第一顿就想吃肉选这里。价格实惠，不需要预约，进门直接坐。</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">🐟 오막집 · 步行约1分钟</div>
+        <div class="tip-body">海鲜汤/锅，离酒店最近，飞机上吃了东西、不太饿但想吃点暖的，来这最合适。</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">🛒 해운대 전통시장（海云台传统市场）· 步行约8分钟</div>
+        <div class="tip-body">如果不想正式吃饭，去传统市场逛一圈，买炒年糕、鱼糕汤、各种小吃，边走边吃，顺便感受一下釜山烟火气。</div>
+      </div>
+    </div>
+
+    <div class="notice" style="margin-top:1rem">
+      <div class="notice-title">🗺 5/4 冲浪后去超市（天气好）</div>
+      <div class="notice-body">
+        冲浪结束约12:30，打车回海云台方向顺路逛超市：<br>
+        <strong>E-mart 海云台店</strong>（이마트 해운대점）：好逛、选品全，开车约10分钟 · 营业09:30–24:00<br>
+        <strong>Homeplus 海云台店</strong>（홈플러스 해운台점）：离酒店更近，开车约8分钟 · 营业10:00–24:00<br>
+        <strong>Costco 釜山店</strong>（코스트코 부산점）：有会员卡的话推荐，大包零食+韩国食品，开车约20分钟
+      </div>
     </div>
   </div>
 
